@@ -171,7 +171,7 @@ for epoch in range(100):
     latent = latent_model(input_id.squeeze(1), mask)
     rec = reco(latent)
     save_image(rec, f"prediction_{epoch}.png")
-    torch.save(latent, f"latent_{epoch}.pth")
+    torch.save(latent_model, f"latent_{epoch}.pth")
     torch.save(reco, f"reconstructor_{epoch}.pth")
 
 
